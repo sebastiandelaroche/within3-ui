@@ -7,7 +7,7 @@ import { ZipCodeHistory } from '../components/ZipCodeHistory';
 
 export const ZipCode: React.FC = () => {
   const { data, fetchMore, refetch, loading } = useFetchZipCode({ country: 'US', postalCode: '' });
-  const { history, addHistory, clearHistory, getLast5History } = useHistoryZipCodes();
+  const { addHistory, clearHistory, getLast5History } = useHistoryZipCodes();
   const showDetail = data?.zipcode?.__typename === 'ZipCode';
 
   const onSearchHandle = async (country: string, postalCode: string) => {

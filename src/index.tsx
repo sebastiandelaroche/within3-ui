@@ -8,8 +8,10 @@ import reportWebVitals from './reportWebVitals';
 
 import 'antd/dist/antd.css';
 
+const API_URL = process.env.REACT_APP_API_URI || 'http://localhost:3001/graphql';
+
 const client = new ApolloClient({
-  uri: 'http://localhost:3001/graphql',
+  uri: API_URL,
   cache: new InMemoryCache()
 });
 
